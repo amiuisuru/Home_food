@@ -34,6 +34,7 @@ public class login extends javax.swing.JFrame {
         jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\isuru udana\\Downloads\\spices_seasonings_red_pepper_black_pepper_pepper_star_anise_onion_ginger_garlic_walnuts_bay_leaf_78738_1920x1080.jpg")); // NOI18N
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("HOME FOOD -login  page");
 
         jPanel1.setLayout(null);
 
@@ -49,6 +50,7 @@ public class login extends javax.swing.JFrame {
         jPanel1.add(name);
         name.setBounds(220, 400, 181, 22);
 
+        login.setBackground(new java.awt.Color(102, 0, 0));
         login.setText("login");
         login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
