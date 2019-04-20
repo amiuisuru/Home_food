@@ -114,10 +114,10 @@ Toolkit.getDefaultToolkit().getSystemEventQueue().postEvent(windowClose);
     private void loginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginActionPerformed
 String uname= name.getText();
 String psw= PasswordField1.getText();
-if(uname.equals("isuru") && psw.equals("1995"))
+if(uname.equals("") && psw.equals(""))
 {
     String[] args = null;
- food_selection.food_selectionmain(args);
+selection.selectionmain(args);
  close();
 }
 else
