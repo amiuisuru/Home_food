@@ -107,12 +107,12 @@
             <Component class="javax.swing.JLabel" name="jLabel1">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="2" name="C:\Users\isuru udana\Downloads\bread_pastries_many_76629_1280x720.jpg"/>
+                  <Image iconType="2" name="C:\Users\isuru udana\Desktop\home\2019.04.20\photos\bread_pastries_many_76629_1280x720.jpg"/>
                 </Property>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-                  <AbsoluteConstraints x="-2" y="-1" width="810" height="470"/>
+                  <AbsoluteConstraints x="-2" y="-1" width="810" height="510"/>
                 </Constraint>
               </Constraints>
             </Component>

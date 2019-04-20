@@ -78,9 +78,9 @@ public class selection extends javax.swing.JFrame {
         selection_panal.add(jLabel2);
         jLabel2.setBounds(100, 150, 370, 30);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\isuru udana\\Downloads\\bread_pastries_many_76629_1280x720.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\isuru udana\\Desktop\\home\\2019.04.20\\photos\\bread_pastries_many_76629_1280x720.jpg")); // NOI18N
         selection_panal.add(jLabel1);
-        jLabel1.setBounds(-2, -1, 810, 470);
+        jLabel1.setBounds(-2, -1, 810, 510);
 
         parent_panel.add(selection_panal, "card2");
 
