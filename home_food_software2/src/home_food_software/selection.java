@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
  * @author isuru udana
  */
 public class selection extends javax.swing.JFrame {
-//-FD  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//Connection to make conn(connection)vith database-FD  -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Connection conn= null;
     PreparedStatement pre =null;
     /**
@@ -30,6 +30,11 @@ Connection conn= null;
     public selection() {
         initComponents();
         show_user();
+        show_rice_varietiesList();
+         show_vegetablesList();
+         show_meat_and_fishList();
+         show_dessertList();
+         show_daily_need_nutritionList();
     }
     
     
@@ -55,8 +60,23 @@ Connection conn= null;
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         database_login = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
         jButton4 = new javax.swing.JButton();
+        jTabbedPane5 = new javax.swing.JTabbedPane();
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTable2 = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jTable3 = new javax.swing.JTable();
+        jPanel3 = new javax.swing.JPanel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTable4 = new javax.swing.JTable();
+        jPanel4 = new javax.swing.JPanel();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTable5 = new javax.swing.JTable();
+        jPanel5 = new javax.swing.JPanel();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTable6 = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Home Food");
@@ -74,7 +94,7 @@ Connection conn= null;
             }
         });
         selection_panal.add(jButton1);
-        jButton1.setBounds(310, 190, 230, 70);
+        jButton1.setBounds(500, 120, 230, 70);
 
         jButton2.setForeground(new java.awt.Color(102, 102, 0));
         jButton2.setText("Change the database");
@@ -84,7 +104,7 @@ Connection conn= null;
             }
         });
         selection_panal.add(jButton2);
-        jButton2.setBounds(310, 270, 230, 70);
+        jButton2.setBounds(500, 210, 230, 70);
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Wide Latin", 0, 13)); // NOI18N
@@ -96,7 +116,7 @@ Connection conn= null;
 
         jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\isuru udana\\Desktop\\home\\2019.04.20\\photos\\bread_pastries_many_76629_1280x720.jpg")); // NOI18N
         selection_panal.add(jLabel1);
-        jLabel1.setBounds(-2, -1, 810, 510);
+        jLabel1.setBounds(-2, -1, 1000, 510);
 
         parent_panel.add(selection_panal, "card2");
 
@@ -146,14 +166,12 @@ Connection conn= null;
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, customer_ordersLayout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 237, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 246, Short.MAX_VALUE)
                 .addComponent(jButton3)
                 .addGap(30, 30, 30))
         );
 
         parent_panel.add(customer_orders, "card4");
-
-        jLabel4.setText("jLabel4");
 
         jButton4.setText("Go to home page");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -162,25 +180,167 @@ Connection conn= null;
             }
         });
 
+        jTable2.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "RiceId ", "Name_of_the_Rice"
+            }
+        ));
+        jScrollPane2.setViewportView(jTable2);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(543, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        jTabbedPane5.addTab("Rice varieties", jPanel1);
+
+        jTable3.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "VegetableId ", "Name_of_the_Vegetable"
+            }
+        ));
+        jScrollPane3.setViewportView(jTable3);
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(543, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        jTabbedPane5.addTab("Vegetables", jPanel2);
+
+        jTable4.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Meat_or_FishId ", "Name_of_the_Meat_or_Fish "
+            }
+        ));
+        jScrollPane4.setViewportView(jTable4);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(543, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        jTabbedPane5.addTab("meat and fish", jPanel3);
+
+        jTable5.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "DessertId", "Name_of_the_Dessert"
+            }
+        ));
+        jScrollPane5.setViewportView(jTable5);
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(543, Short.MAX_VALUE))
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        jTabbedPane5.addTab("Dessert", jPanel4);
+
+        jTable6.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "nutrition_name", "daily_need_quantity"
+            }
+        ));
+        jScrollPane6.setViewportView(jTable6);
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 440, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(543, Short.MAX_VALUE))
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(40, Short.MAX_VALUE))
+        );
+
+        jTabbedPane5.addTab("daily_need_nutrition", jPanel5);
+
         javax.swing.GroupLayout database_loginLayout = new javax.swing.GroupLayout(database_login);
         database_login.setLayout(database_loginLayout);
         database_loginLayout.setHorizontalGroup(
             database_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, database_loginLayout.createSequentialGroup()
-                .addContainerGap(635, Short.MAX_VALUE)
-                .addGroup(database_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton4)
-                    .addComponent(jLabel4))
-                .addGap(43, 43, 43))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton4)
+                .addGap(29, 29, 29))
+            .addComponent(jTabbedPane5)
         );
         database_loginLayout.setVerticalGroup(
             database_loginLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(database_loginLayout.createSequentialGroup()
-                .addGap(42, 42, 42)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 350, Short.MAX_VALUE)
-                .addComponent(jButton4)
-                .addGap(33, 33, 33))
+                .addComponent(jTabbedPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 483, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jButton4))
         );
 
         parent_panel.add(database_login, "card3");
@@ -235,10 +395,10 @@ Connection conn= null;
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         //again goto selection panal-FD--------------------------------------------------------------------------------------------------------------------------
-           parent_panel.removeAll();
-       parent_panel.add(selection_panal);
-       parent_panel.repaint();
-       parent_panel.revalidate();
+        parent_panel.removeAll();
+        parent_panel.add(selection_panal);
+        parent_panel.repaint();
+        parent_panel.revalidate();
     }//GEN-LAST:event_jButton4ActionPerformed
 
     /**
@@ -285,13 +445,28 @@ Connection conn= null;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JTabbedPane jTabbedPane5;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTable jTable2;
+    private javax.swing.JTable jTable3;
+    private javax.swing.JTable jTable4;
+    private javax.swing.JTable jTable5;
+    private javax.swing.JTable jTable6;
     private javax.swing.JPanel parent_panel;
     private javax.swing.JPanel selection_panal;
     // End of variables declaration//GEN-END:variables
-//---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+//order-FD---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     public ArrayList<order> orderList(){
         ArrayList<order>orderList =new ArrayList<>();
     try {
@@ -331,9 +506,166 @@ Connection conn= null;
   row[10]=list.get(i).getQuntity();
   
   mode1.addRow(row);
-  }
-
-
-
+  
+ }
 }
+    
+// rice_varieties-Fd------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    public ArrayList<rice_varieties> rice_varietiesList(){
+        ArrayList<rice_varieties>rice_varietiesList =new ArrayList<>();
+    try {
+       
+           conn= (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/online_food_order","root","");
+         //  pre=(PreparedStatement) conn.prepareStatement(sq1);
+          String q1="SELECT * FROM `rice_varieties` WHERE 1";
+          Statement st1= conn.createStatement();
+          ResultSet rs1=st1.executeQuery(q1);
+         rice_varieties rice_varieties1;
+          while (rs1.next()){
+              rice_varieties1= new rice_varieties(rs1.getInt("RiceId"),rs1.getString("Name_of_the_Rice"));
+                 rice_varietiesList.add(rice_varieties1);
+          }
+        }
+        catch (SQLException |HeadlessException ex ) {
+            JOptionPane.showMessageDialog(null,ex);
+        } return rice_varietiesList;
+    }
+    public void show_rice_varietiesList(){
+  ArrayList<rice_varieties> list = rice_varietiesList();
+  DefaultTableModel mode1=(DefaultTableModel)jTable2.getModel();
+  Object[] row =new Object[2];for (int i=0;i<list.size();i++){
+  row[0]=list.get(i).getRiceId();
+  row[1]=list.get(i). getName_of_the_Rice();
+
+  mode1.addRow(row);
+    }    
+    
+    } 
+  //vegetablesList-Fd--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  
+    public ArrayList<vegetables> vegetablesList(){
+        ArrayList<vegetables>vegetablesList =new ArrayList<>();
+    try {
+       
+           conn= (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/online_food_order","root","");
+         //  pre=(PreparedStatement) conn.prepareStatement(sq1);
+          String q2="SELECT * FROM `vegetables` WHERE 1";
+          Statement st2= conn.createStatement();
+          ResultSet rs2=st2.executeQuery(q2);
+         vegetables vegetables1;
+          while (rs2.next()){
+             vegetables1= new vegetables(rs2.getInt("VegetableId"),rs2.getString("Name_of_the_Vegetable"));
+                vegetablesList.add(vegetables1);
+          }
+        }
+        catch (SQLException |HeadlessException ex ) {
+            JOptionPane.showMessageDialog(null,ex);
+        } return vegetablesList;
+    }
+    
+    public void show_vegetablesList(){
+  ArrayList<vegetables> list = vegetablesList();
+  DefaultTableModel mode1=(DefaultTableModel)jTable3.getModel();
+  Object[] row =new Object[2];for (int i=0;i<list.size();i++){
+  row[0]=list.get(i).getVegetableId();
+  row[1]=list.get(i). getName_of_the_Vegetable();
+
+  mode1.addRow(row);
+    }    
+    }
+    
+ // meat_and_fishList-FD------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------   
+    
+    public ArrayList<meat_and_fish> meat_and_fishList(){
+        ArrayList<meat_and_fish>meat_and_fishList =new ArrayList<>();
+    try {
+       
+           conn= (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/online_food_order","root","");
+         //  pre=(PreparedStatement) conn.prepareStatement(sq1);
+          String q3="SELECT * FROM `meat_and_fish` WHERE 1";
+          Statement st3= conn.createStatement();
+          ResultSet rs3=st3.executeQuery(q3);
+         meat_and_fish meat_and_fish1;
+          while (rs3.next()){
+             meat_and_fish1= new meat_and_fish(rs3.getInt("Meat_or_FishId"),rs3.getString("Name_of_the_Meat_or_Fish"));
+              meat_and_fishList.add(meat_and_fish1);
+          }
+        }
+        catch (SQLException |HeadlessException ex ) {
+            JOptionPane.showMessageDialog(null,ex);
+        } return meat_and_fishList;
+    }
+    
+    public void show_meat_and_fishList(){
+  ArrayList<meat_and_fish> list = meat_and_fishList();
+  DefaultTableModel mode1=(DefaultTableModel)jTable4.getModel();
+  Object[] row =new Object[2];for (int i=0;i<list.size();i++){
+  row[0]=list.get(i).getMeat_or_FishId();
+  row[1]=list.get(i). getName_of_the_Meat_or_Fish();
+
+  mode1.addRow(row);
+    }    
+    } 
+//dessertList-FD-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------    
+
+ public ArrayList<dessert> dessertList(){
+        ArrayList<dessert>dessertList =new ArrayList<>();
+    try {
+       
+           conn= (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/online_food_order","root","");
+         //  pre=(PreparedStatement) conn.prepareStatement(sq1);
+          String q3="SELECT * FROM `dessert` WHERE 1";
+          Statement st3= conn.createStatement();
+          ResultSet rs3=st3.executeQuery(q3);
+         dessert dessert1;
+          while (rs3.next()){
+             dessert1= new dessert(rs3.getInt("DessertId"),rs3.getString("Name_of_the_Dessert"));
+             dessertList.add( dessert1);
+          }
+        }
+        catch (SQLException |HeadlessException ex ) {
+            JOptionPane.showMessageDialog(null,ex);
+        } return  dessertList;
+    }
+    
+    public void show_dessertList(){
+  ArrayList<dessert> list = dessertList();
+  DefaultTableModel mode1=(DefaultTableModel)jTable5.getModel();
+  Object[] row =new Object[2];for (int i=0;i<list.size();i++){
+  row[0]=list.get(i).getDessertId();
+  row[1]=list.get(i). getName_of_the_Dessert();
+
+  mode1.addRow(row);
+    }    
+    } 
+ //daily_need_nutrition-FD-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  public ArrayList<daily_need_nutrition> daily_need_nutritionList(){
+        ArrayList<daily_need_nutrition>daily_need_nutritionList =new ArrayList<>();
+    try {
+       
+           conn= (Connection) DriverManager.getConnection("jdbc:mysql://localhost:3306/online_food_order","root","");
+         //  pre=(PreparedStatement) conn.prepareStatement(sq1);
+          String q4="SELECT * FROM `daily_need_nutrition` WHERE 1";
+          Statement st4= conn.createStatement();
+          ResultSet rs4=st4.executeQuery(q4);
+         daily_need_nutrition daily_need_nutrition1;
+          while (rs4.next()){
+            daily_need_nutrition1= new daily_need_nutrition(rs4.getString("nutrition_name"),rs4.getInt("daily_need_quantity"));
+             daily_need_nutritionList.add(daily_need_nutrition1);
+          }
+        }
+        catch (SQLException |HeadlessException ex ) {
+            JOptionPane.showMessageDialog(null,ex);
+        } return  daily_need_nutritionList;
+    }
+    
+    public void show_daily_need_nutritionList(){
+  ArrayList<daily_need_nutrition> list = daily_need_nutritionList();
+  DefaultTableModel mode1=(DefaultTableModel)jTable6.getModel();
+  Object[] row =new Object[2];for (int i=0;i<list.size();i++){
+  row[0]=list.get(i).getnutrition_name();
+  row[1]=list.get(i). getdaily_need_quantity();
+
+  mode1.addRow(row);
+    }    
+    }   
 }
